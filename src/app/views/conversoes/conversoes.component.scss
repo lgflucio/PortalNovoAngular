@@ -1,0 +1,35 @@
+.tableFixHead {
+    overflow: auto;
+    height: 400px;
+}
+.tableFixHead thead th {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: cadetblue;
+    color: white;
+}
+
+/* Just common table stuff. Really. */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.loading-small {
+    height: 75px;
+}
+
+.bg-primarys {
+    // background-color: #d9edf7;
+    background-color: #f2f2f2;
+}
+
+.btn-icon-t {
+    background: transparent;
+}
+
+.link-arquivo{
+    color: rgb(74, 139, 201) !important;
+}
+

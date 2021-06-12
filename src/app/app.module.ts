@@ -76,8 +76,7 @@ import { ConversoesComponent } from './views/conversoes/conversoes.component';
     ...APP_CONTAINERS,
     P404Component,
     P500Component,
-    RegisterComponent,
-    ConversoesComponent
+    RegisterComponent
   ],
   providers: [
     {

@@ -1,1 +1,137 @@
-<p>conversoes works!</p>
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <i class="fa fa-search"></i> Filtros
+            </div>
+            <div class="card-body">
+                <div class="card bg-primarys col-md-12">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="form-group col-sm-3">
+                                <label for="cnpjFornecedor"><strong>CNPJ</strong></label>
+                                <input type="text" class="form-control" id="cnpjFornecedor"
+                                    placeholder="CNPJ do fornecedor">
+                            </div>
+                            <div class="form-group col-sm-5">
+                                <label for="razao"><strong>Razão Social</strong></label>
+                                <input type="text" class="form-control" id="razao" placeholder="Razão Social">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label for="arquivo"><strong>Arquivo</strong></label>
+                                <input type="text" class="form-control" id="arquivo" placeholder="Arquivo">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-sm-2">
+                                <label class="col-form-label" for="date-input"><strong>Data Emissão</strong></label>
+                                <div>
+                                    <input class="form-control" id="date-input" type="date" name="date-input"
+                                        placeholder="Data Emissao">
+                                    <span class="help-block text-danger">Entre com uma data válida</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 col-sm-4 col-md mb-3 mb-xl-0 text-center">
+                                <button type="button" class="btn btn-primary" (click)="filtrar()"><i
+                                        class="fa fa-search"></i>&nbsp;Filtrar</button>
+
+                                <button type="button" class="btn btn-secondary" (click)="limparFiltros()"><i
+                                        class="fa fa-close"></i>&nbsp;Limpar Filtros</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <i class="fa fa-align-justify"></i> Situação Conversões
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Protocolo</th>
+                            <th>Nota</th>
+                            <th>Status</th>
+                            <th>Data Envio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2106031258891794076693</td>
+                            <td>585</td>
+                            <td>
+                                <span class="badge badge-success">Finalizada</span>
+                            </td>
+                            <td>2021-06-03 12:58:13.133</td>
+                        </tr>
+                        <tr>
+                            <td>2106031300128101084366</td>
+                            <td>569</td>
+                            <td>
+                                <span class="badge badge-danger">Erro de Conversão</span>
+                            </td>
+                            <td>2021-06-03 13:00:55.667</td>
+                        </tr>
+                        <tr>
+                            <td>2106031315476256022017</td>
+                            <td>596</td>
+                            <td>
+                                <span class="badge badge-secondary">Não iniciado</span>
+                            </td>
+                            <td>2021-06-03 13:15:46.143</td>
+                        </tr>
+                        <tr>
+                            <td>2106031811916135059691</td>
+                            <td>800</td>
+                            <td>
+                                <span class="badge badge-warning">Em Processo</span>
+                            </td>
+                            <td>2021-06-03 18:11:38.027</td>
+                        </tr>
+                        <tr>
+                            <td>2106031317355580078153</td>
+                            <td>151231</td>
+                            <td>
+                                <span class="badge badge-success">Finalizada</span>
+                            </td>
+                            <td>2021-06-03 13:17:37.367</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+                    <li class="page-item active">
+                        <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Próxima</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+
+        $('.input-daterange').datepicker({
+            format: 'dd-mm-yyyy',
+            autoclose: true,
+            calendarWeeks: true,
+            clearBtn: true,
+            disableTouchKeyboard: true
+        });
+
+    });
+</script>

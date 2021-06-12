@@ -69,6 +69,10 @@ export const routes: Routes = [
         loadChildren: () => import('./views/nfses/nfses.module').then(m => m.NfsesModule)
       },
       {
+        path: 'conversoes',
+        loadChildren: () => import('./views/conversoes/conversoes.module').then(m => m.ConversoesModule)
+      },
+      {
         path: 'icons',
         loadChildren: () => import('./views/icons/icons.module').then(m => m.IconsModule)
       },

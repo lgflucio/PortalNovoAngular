@@ -16,6 +16,11 @@ export const navItems: INavData[] = [
     icon: 'fa fa-archive'
   },
   {
+    name: 'Conversões',
+    url: '/conversoes',
+    icon: 'fa fa-database'
+  },
+  {
     name: 'Colors',
     url: '/theme/colors',
     icon: 'icon-drop'
