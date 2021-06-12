@@ -1,0 +1,129 @@
+<div class="animated fadeIn">
+    <div class="card">
+        <div class="card-header">
+            Filtros
+        </div>
+        <div class="card-body">
+            <div class="card bg-primarys col-md-12">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="form-group col-sm-3">
+                            <label for="cnpjFornecedor"><strong>CNPJ</strong></label>
+                            <input [(ngModel)]="filtroDiv.cnpj" type="text" class="form-control" id="cnpjFornecedor"
+                                placeholder="CNPJ do fornecedor">
+                        </div>
+                        <div class="form-group col-sm-5">
+                            <label for="razao"><strong>Razão Social</strong></label>
+                            <input [(ngModel)]="filtroDiv.razao" type="text" class="form-control" id="razao"
+                                placeholder="Razão Social">
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <label for="arquivo"><strong>Arquivo</strong></label>
+                            <input [(ngModel)]="filtroDiv.arquivo" type="text" class="form-control" id="arquivo"
+                                placeholder="Arquivo">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-2">
+                            <label for="numero"><strong>Número</strong></label>
+                            <input [(ngModel)]="filtroDiv.numero" type="text" class="form-control" id="numero"
+                                placeholder="Número">
+                        </div>
+                        <div class="form-group col-sm-2">
+                            <label for="vat"><strong>Pedido</strong></label>
+                            <input [(ngModel)]="filtroDiv.pedido" type="text" class="form-control" id="vat"
+                                placeholder="Pedido">
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <label for="protocolo"><strong>Protocolo</strong></label>
+                            <input [(ngModel)]="filtroDiv.protocolo" type="text" class="form-control" id="protocolo"
+                                placeholder="Protocolo">
+                        </div>
+                        <div class="form-group col-sm-2">
+                            <label class="col-form-label" for="date-input"><strong>Data Emissão</strong></label>
+                            <div>
+                                <input [(ngModel)]="filtroDiv.data" class="form-control" id="date-input" type="date"
+                                    name="date-input" placeholder="Data Emissao">
+                                <span class="help-block text-danger">Entre com uma data válida</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 col-sm-4 col-md mb-3 mb-xl-0 text-center">
+                            <button type="button" class="btn btn-primary" (click)="filtrar()"><i
+                                    class="fa fa-search"></i>&nbsp;Filtrar</button>
+
+                            <button type="button" class="btn btn-secondary" (click)="limparFiltros()"><i
+                                    class="fa fa-close"></i>&nbsp;Limpar Filtros</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/.col-->
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <i class="fa fa-align-justify"></i> Notas de Serviços
+                    <input [(ngModel)]="filtro.search" type="text" class="float-right">
+                    <span class="float-right">Pesquisar: </span>
+                </div>
+                <div *ngIf="!portalNfse" class="">
+                    <img src="../../../assets/img/brand/loading-gif-transparent-10.gif" alt="" class="loading-small">
+                </div>
+                <div *ngIf="portalNfse" class="card-body">
+                    <div class="tableFixHead">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Cnpj</th>
+                                    <th>Razão Social</th>
+                                    <th>Número</th>
+                                    <th>Arquivo</th>
+                                    <th>Pedido</th>
+                                    <th>Linha</th>
+                                    <th>Emissão</th>
+                                    <th>Upload</th>
+                                    <th>Preenchimento</th>
+                                    <th>Status</th>
+                                    <th>Histórico</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let portal of portalNfse">
+                                    <td>
+                                        <a type="button" class="btn btn-brand btn-sm"><i class="fa fa-pencil"
+                                                aria-hidden="true"></i></a>
+                                        <a type="button" class="btn btn-brand btn-sm" data-toggle="tooltip"
+                                            data-placement="top" title="Enviar para Receiver"><i class="fa fa-database"
+                                                aria-hidden="true" (click)="sendReceiver(portal.id)"></i></a>
+                                    </td>
+                                    <td>{{portal.cnpjFornecedor}}</td>
+                                    <td>{{portal.razaoSocial}}</td>
+                                    <td>{{portal.numeroNota}}</td>
+                                    <td>
+                                        <a type="button" (click)="download(portal.idAnexo)"
+                                            class="link-arquivo">{{portal.arquivo}}</a>
+                                    </td>
+                                    <td>{{portal.pedido}}</td>
+                                    <td>{{portal.linha}}</td>
+                                    <td>{{portal.dataEmissao | date:'dd/MM/yyyy'}}</td>
+                                    <td>{{portal.dataUpload | date:'dd/MM/yyyy'}}</td>
+                                    <td>{{portal.dataPreenchimento | date:'dd/MM/yyyy'}}</td>
+                                    <td>{{portal.statusProtocolo}}</td>
+                                    <td>
+                                        <i class="fa fa-clock-o text-info mr-1"></i>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

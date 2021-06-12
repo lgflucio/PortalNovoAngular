@@ -1,0 +1,122 @@
+<div class="app-body bg-register-page">
+  <main class="main d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <div class="card mx-4">
+            <div class="card-body p-4">
+              <form>
+                <h1>Registrar</h1>
+                <p class="text-muted">Crie sua conta</p>
+                <div class="input-group mb-3">
+                  <input class="form-check-input" style="margin-left: 5px;" type="checkbox" value="sim"
+                    id="internacional">
+                  <label class="form-check-label" style="margin-left: 25px;" for="internacional">
+                    Internacional
+                  </label>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="icon-user"></i></span>
+                  </div>
+                  <input type="text" class="form-control" placeholder="CPF ou CNPJ" required>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">@</span>
+                  </div>
+                  <input type="text" class="form-control" placeholder="Email" autocomplete="email" required>
+                </div>
+
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">@</span>
+                  </div>
+                  <select class="form-control" id="opcaoTributaria">
+                    <option value="0">Opção Tributária</option>
+                    <option value="1">Lucro Presumido</option>
+                    <option value="2">Lucro Real</option>
+                    <option value="3">Simples Nacional</option>
+                    <option value="4">Outros</option>
+                  </select>
+                </div>
+                <div class="input-group mb-3 col-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="icon-direction"></i></span>
+                  </div>
+                  <select class="form-control" id="estado">
+                    <option value="0">Estado</option>
+                    <option value="1">Lucro Presumido</option>
+                    <option value="2">Lucro Real</option>
+                    <option value="3">Simples Nacional</option>
+                    <option value="4">Outros</option>
+                  </select>
+                </div>
+                <div class="input-group mb-3 col-4">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="icon-directions"></i></span>
+                  </div>
+                  <select class="form-control" id="municipio">
+                    <option value="0">Município</option>
+                    <option value="1">Lucro Presasrasrasrasrasrasraumido</option>
+                    <option value="1">Lucro Presasrasrasrasrasrasraumido</option>
+                    <option value="1">Lucro Presasrasrasrasrasrasraumido</option>
+                    <option value="1">Lucro Presasrasrasrasrasrasraumido</option>
+                    <option value="1">Lucro Presasrasrasrasrasrasraumido</option>
+                    <option value="1">Lucro Presasrasrasrasrasrasraumido</option>
+                    <option value="1">Lucro Presasrasrasrasrasrasraumido</option>
+                    <option value="1">Lucro Presasrasrasrasrasrasraumido</option>
+                    <option value="1">Lucro Presasrasrasrasrasrasraumido</option>
+                    <option value="1">Lucro Presasrasrasrasrasrasraumido</option>
+                    <option value="2">Lucro Real</option>
+                    <option value="3">Simples Nacional</option>
+                    <option value="4">Outros</option>
+                  </select>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="icon-lock"></i></span>
+                  </div>
+                  <input type="password" class="form-control" placeholder="Senha" autocomplete="new-password" required>
+                </div>
+                <div class="input-group mb-4">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="icon-lock"></i></span>
+                  </div>
+                  <input type="password" class="form-control" placeholder="Confirme sua Senha"
+                    autocomplete="new-password" required>
+                </div>
+                <div class="input-group mb-4">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="icon-lock"></i></span>
+                  </div>
+                  <input type="password" class="form-control" placeholder="Confirme sua Senha"
+                    autocomplete="new-password" required>
+                </div>
+                <div class="input-group mb-4">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="icon-lock"></i></span>
+                  </div>
+                  <input type="password" class="form-control" placeholder="Confirme sua Senha"
+                    autocomplete="new-password" required>
+                </div>
+                <div class="input-group mb-4">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="icon-lock"></i></span>
+                  </div>
+                  <input type="password" class="form-control" placeholder="Confirme sua Senha"
+                    autocomplete="new-password" required>
+                </div>
+                <button type="button" class="btn btn-success">Cadastrar</button>
+                <button type="button" class="btn btn-primary" (click)="backToLogin()">Voltar</button>
+              </form>
+            </div>
+            <div class="card-footer p-4">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

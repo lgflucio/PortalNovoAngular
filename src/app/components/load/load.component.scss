@@ -1,0 +1,11 @@
+@import "./load-animation.component.scss";
+
+.show{
+    opacity: 1 !important;
+    z-index: 999999 !important;
+}
+
+.hidden{
+    opacity: 0 !important;
+    z-index: -9999999 !important; 
+}
