@@ -48,6 +48,7 @@ import { AuthenticatorModule } from './views/login/login.module';
 import { FormsModule } from '@angular/forms';
 import { NfsesComponent } from './views/nfses/nfses.component';
 import { NfsesModule } from './views/nfses/nfses.module';
+import { ConversoesComponent } from './views/conversoes/conversoes.component';
 
 @NgModule({
   imports: [
@@ -75,7 +76,8 @@ import { NfsesModule } from './views/nfses/nfses.module';
     ...APP_CONTAINERS,
     P404Component,
     P500Component,
-    RegisterComponent
+    RegisterComponent,
+    ConversoesComponent
   ],
   providers: [
     {
